@@ -10,6 +10,19 @@ with st.sidebar:
     st.header("Settings")
     num_phases = st.slider("Number of phases", min_value=2, max_value=6, value=4)
     st.divider()
+    st.markdown("**Claude API Key** *(optional)*")
+    api_key_input = st.text_input(
+        "API Key",
+        type="password",
+        placeholder="sk-ant-...",
+        help="Leave blank to use your active Claude Code session (no key needed). Enter a key to use the Anthropic API directly.",
+        label_visibility="collapsed",
+    )
+    if api_key_input:
+        st.caption("Using provided API key.")
+    else:
+        st.caption("Using Claude Code session (no key required).")
+    st.divider()
     st.markdown("**How to use:**")
     st.markdown("1. Enter your project goal\n2. Add optional context\n3. Click Generate")
 
@@ -29,7 +42,7 @@ context = st.text_area(
 if st.button("Generate Plan", type="primary", disabled=not goal.strip()):
     with st.spinner("Generating your project plan..."):
         try:
-            plan = generate_plan(goal.strip(), context.strip(), num_phases)
+            plan = generate_plan(goal.strip(), context.strip(), num_phases, api_key=api_key_input)
 
             col1, col2, col3 = st.columns(3)
             col1.metric("Project", plan["project_title"])
@@ -73,4 +86,7 @@ if st.button("Generate Plan", type="primary", disabled=not goal.strip()):
 
         except Exception as e:
             st.error(f"Error generating plan: {e}")
-            st.info("Make sure your ANTHROPIC_API_KEY is set in the .env file.")
+            st.info(
+                "No API key? Make sure you're running inside a Claude Code session. "
+                "Alternatively, enter your Anthropic API key in the sidebar."
+            )

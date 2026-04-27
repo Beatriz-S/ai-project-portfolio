@@ -1,0 +1,38 @@
+Sprint Planning Meeting - March 6, 2026
+Attendees: Sarah (PM), James (Backend), Priya (Frontend), Carlos (DevOps), Mia (Design)
+
+Sarah: Alright everyone, let's kick off sprint planning. We have two weeks. Main goal is to ship the user dashboard and fix the auth bug that's been blocking QA.
+
+James: I finished the API endpoints for the dashboard last Friday. The auth bug is trickier — I think it's a race condition in the token refresh logic. I need at least two days to properly investigate it.
+
+Sarah: Okay, make the auth bug your top priority. Can you give us a fix by Wednesday?
+
+James: I'll try, but no promises until I dig in. Let's say Thursday to be safe.
+
+Priya: Once James fixes auth, I can unblock myself on the dashboard components. Right now I'm blocked. In the meantime I'll finish the notification panel and start the settings page.
+
+Carlos: I wanted to flag that our staging environment has been flaky — deployments are taking 20+ minutes. I'm going to look at the Docker layer caching. Should have it faster by end of week.
+
+Sarah: That's important, Carlos. Please prioritize that — it's slowing everyone down.
+
+Mia: I have the new onboarding designs ready for review. Can someone from the team give me feedback by Tuesday? I want to hand off to Priya by next Thursday at the latest.
+
+Priya: I'll review your designs Tuesday morning, Mia.
+
+Sarah: Great. So to recap — James on auth bug by Thursday, Priya working on notifications and settings in parallel, Carlos fixing staging deploys, and Mia waiting on design feedback from Priya.
+
+One open question — do we want to include the analytics tab in this sprint or push it to next?
+
+James: I'd push it. We already have a lot on our plate.
+
+Priya: Agreed, too risky to rush analytics.
+
+Sarah: Fair enough, analytics goes to the backlog. Let's plan the next sprint review for March 20th, same time. Any blockers I'm missing?
+
+Carlos: Nothing else from me.
+
+James: I might need help from Carlos if the auth fix requires infrastructure changes. I'll loop you in if needed.
+
+Carlos: Sure, just ping me.
+
+Sarah: Perfect. Let's get it done. Thanks everyone.

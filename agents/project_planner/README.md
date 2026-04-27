@@ -19,18 +19,42 @@ Phase 1: Research & Planning (Week 1)
 
 ## Run It
 
-**CLI:**
+**Virtual environment (recommended):** keeps dependencies out of your global Python install.
+
+PowerShell (Windows):
+
+```powershell
+cd agents/project_planner
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+pip install -r requirements.txt
+```
+
+macOS / Linux:
+
 ```bash
 cd agents/project_planner
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
 pip install -r requirements.txt
+```
+
+**CLI:**
+
+```bash
 cp ../../.env.example ../../.env   # then add your ANTHROPIC_API_KEY
 python planner.py
 ```
 
 **Streamlit UI:**
+
 ```bash
 streamlit run app.py
 ```
+
+If your shell blocks `Activate.ps1`, run once: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`.
 
 ## How It Works
 

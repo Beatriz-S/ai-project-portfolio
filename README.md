@@ -7,7 +7,7 @@ A collection of practical AI applications focused on productivity and project ma
 | Project | Description | Tech | Status |
 |---------|-------------|------|--------|
 | [Project Planner Agent](./agents/project_planner/) | Give it a goal, get a full phased plan with tasks and timelines | Claude, Streamlit | ✅ Live |
-| [Meeting Summarizer](./agents/meeting_summarizer/) | Paste a transcript, get summary + action items | Claude | 🚧 Coming Soon |
+| [Meeting Summarizer](./agents/meeting_summarizer/) | Paste a transcript, get summary + action items | Claude, Streamlit | ✅ Live |
 | [Document Q&A (RAG)](./rag_apps/document_qa/) | Chat with your project docs using retrieval | Claude, ChromaDB | 🚧 Coming Soon |
 | [Email Drafter](./automations/email_drafter/) | Turn bullet points into polished emails | Claude | 🚧 Coming Soon |
 

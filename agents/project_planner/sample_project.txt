@@ -1,0 +1,10 @@
+PROJECT GOAL
+------------
+Build an internal employee onboarding portal for a mid-size company
+
+
+ADDITIONAL CONTEXT
+------------------
+Team of 2 developers, 1 designer. 8-week timeline. Stack: Next.js frontend,
+Node.js/Express backend, PostgreSQL. Features needed: new hire checklist,
+document upload, IT provisioning requests, buddy assignment, and manager dashboard.
